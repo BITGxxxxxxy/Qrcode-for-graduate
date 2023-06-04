@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AR模型浏览器</title>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@2.3.2"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #arContainer {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="arContainer">
+        <a-scene embedded arjs="sourceType: webcam;">
+            <a-assets>
+                <a-asset-item id="model" src="https://github.com/BITGxxxxxxy/Qrcode-for-graduate/blob/main/can0_Dynamic2.glb"></a-asset-item>
+            </a-assets>
+
+            <a-entity gltf-model="#model"></a-entity>
+        </a-scene>
+    </div>
+</body>
+</html>
+
